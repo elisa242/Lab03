@@ -101,7 +101,6 @@ class DepositoStrumenti:
         if id_prestito not in self.prestiti:
             raise Exception(f"Errore: Nessun prestito trovato con codice '{id_prestito}'.")
 
-            # Rimuove il prestito e libera lo strumento dal set dei prestiti attivi
         prestito = self.prestiti.pop(id_prestito)
         if prestito.id_strumento in self.strumenti_in_prestito:
                 self.strumenti_in_prestito.remove(prestito.id_strumento)
